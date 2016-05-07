@@ -21,7 +21,7 @@ public class TowerofHanoi {
         if (orig.isEmpty())
             return;
         move(count-1, orig, end, middle); //the count-1 elements will move to the auxiliary rod
-        end.push(orig.pop());
+        end.push(orig.pop()); //This is where the push to the stack is happening
         move(count-1, middle, orig, end);  //after the initial move to the auxiliary rod, they willbe moved to the end recursively.
     }
     public static void main(String[] args) {
